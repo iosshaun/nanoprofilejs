@@ -1,6 +1,6 @@
-# nanoprofilejs
+## nanoprofilejs
 
-# Client side resize and determine orientation of an image
+### Client side resize and determine orientation of an image
 
 
 
@@ -12,7 +12,7 @@
        Cleaned up a bit and pre-packaged.
        Standing on the shoulders of giants. \0/
  
-# Code is heavily based on the following sources (very few changes made):
+### Code is heavily based on the following sources (very few changes made):
 
  1) Exif rotation handling: 
     https://gist.github.com/runeb/c11f864cd7ead969a5f0
@@ -28,9 +28,10 @@
     http://stackoverflow.com/questions/23945494/use-html5-to-resize-an-image-before-upload
 
 
-# Example usage:
+#### Example usage:
 
-  <!-- hidden fields used to post data on form submit -->
+```
+<!-- hidden fields used to post data on form submit -->
   <input type=hidden id="imageDataInput">
   <input type=hidden id="imageTransformInput">
 
@@ -70,4 +71,4 @@
             transform: <%= profile.profile_image_css_rotation %>;"  
             src="<%=profile.profile_image_data %>"
             width="80px"/>
-
+```
