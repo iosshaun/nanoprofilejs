@@ -46,9 +46,21 @@
                                   'imageDataInput', 
                                   'imageTransformInput')" />
 
+
+
+
 <!-- Called on page load to set the preview from hidden field data 
       after it's been saved. -->
   <script>  
+
+
+  function completionCallback(object){
+    console.log("client completionCallback function called ");
+    //console.log(JSON.stringify(object) );
+    alert("url length: "+ object.url.length)
+  }
+
+
     $(function() {
       var imageData = document.getElementById('imageDataInput').value, 
       var imageXform = document.getElementById('imageTransformInput').value, 

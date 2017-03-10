@@ -2,7 +2,7 @@
 
 ### Client side resize and determine orientation of an image
 
-
+### Example https://codepen.io/shauncp/pen/EWWXZv?editors=0010
 
  Perform client side image resize and rotation operation as needed prior to uploading. 
  Using canvas element to resize image to specific size.
@@ -31,12 +31,6 @@
 #### Example usage:
 
 ```
-<!-- hidden fields used to post data on form submit -->
-  <input type=hidden id="imageDataInput">
-  <input type=hidden id="imageTransformInput">
-
-<!-- image display / preview on upload/resize -->
-  <div id="previewDiv" style="padding:20px;" />
 
 <!-- the file upload control -->
   <input name = "imagefile[]" 
@@ -48,13 +42,23 @@
                                   completionCallback, 
                                   'imageDataInput', 
                                   'imageTransformInput')" />
+<BR>
+<BR>
+
+<!-- hidden fields used to post data on form submit -->
+  <input type=hidden id="imageDataInput"/>
+  <input type=hidden id="imageTransformInput"/>
+
+<!-- image display / preview on upload/resize -->
+  <div id="previewDiv" style="padding:20px;" />
+
 
 <!-- Called on page load to set the preview from hidden field data 
       after it's been saved. -->
   <script>  
     $(function() {
-      var imageData = document.getElementById('imageDataInput').value, 
-      var imageXform = document.getElementById('imageTransformInput').value, 
+      var imageData = document.getElementById('imageDataInput').value;
+      var imageXform = document.getElementById('imageTransformInput').value;
   
       if (imageData)  
         new NanoProfile().appendPreview('previewDiv', 
